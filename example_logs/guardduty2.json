@@ -1,0 +1,146 @@
+{
+  "AccountId": "455098001579",
+  "Arn": "arn:aws:guardduty:us-east-1:455098001579:detector/30b837d8d597bb2c092ab4992996755b/finding/66c3f712f76f94156e869936d93ea090",
+  "CreatedAt": "2023-05-05T23:01:16.127Z",
+  "Description": "EC2 instance i-0ed6ce316572be7a3 is communicating outbound with a known Bitcoin-related IP address 5.161.123.196.",
+  "Id": "66c3f712f76f94156e869936d93ea090",
+  "Partition": "aws",
+  "Region": "us-east-1",
+  "Resource": {
+    "InstanceDetails": {
+      "AvailabilityZone": "us-east-1c",
+      "IamInstanceProfile": {
+        "Arn": "arn:aws:iam::455098001579:instance-profile/common00a8a3e7cf43de3cf0a897616f",
+        "Id": "AIPAIPEEMTGEUQDAQECYK"
+      },
+      "ImageDescription": "null",
+      "ImageId": "ami-00f64d72c2e98d808",
+      "InstanceId": "i-0ed6ce316572be7a3",
+      "InstanceState": "running",
+      "InstanceType": "r5.xlarge",
+      "LaunchTime": "2023-05-02T11:00:49.000Z",
+      "NetworkInterfaces": [
+        {
+          "Ipv6Addresses": [],
+          "NetworkInterfaceId": "eni-0f1398de99b940508",
+          "PrivateDnsName": "ip-10-10-143-107.ec2.internal",
+          "PrivateIpAddress": "10.10.143.107",
+          "PrivateIpAddresses": [
+            {
+              "PrivateDnsName": "ip-10-10-143-107.ec2.internal",
+              "PrivateIpAddress": "10.10.143.107"
+            }
+          ],
+          "PublicDnsName": "ec2-3-89-102-10.compute-1.amazonaws.com",
+          "PublicIp": "3.89.102.10",
+          "SecurityGroups": [
+            {
+              "GroupId": "sg-029c8d965439cbc1c",
+              "GroupName": "BaseSecurityGroupPrivate"
+            }
+          ],
+          "SubnetId": "subnet-04bd834c5d98964ad",
+          "VpcId": "vpc-bcb7a3db"
+        }
+      ],
+      "ProductCodes": [],
+      "Tags": [
+        {
+          "Key": "env",
+          "Value": "production"
+        },
+        {
+          "Key": "role",
+          "Value": "docker-worker"
+        },
+        {
+          "Key": "terraform",
+          "Value": "true"
+        },
+        {
+          "Key": "Name",
+          "Value": "docker-worker-0A8F6B"
+        },
+        {
+          "Key": "aws:autoscaling:groupName",
+          "Value": "docker-worker-on-demand-20220228202137373900000005"
+        },
+        {
+          "Key": "sub_role",
+          "Value": "on-demand"
+        }
+      ]
+    },
+    "ResourceType": "Instance"
+  },
+  "SchemaVersion": "2.0",
+  "Service": {
+    "Action": {
+      "ActionType": "NETWORK_CONNECTION",
+      "NetworkConnectionAction": {
+        "Blocked": false,
+        "ConnectionDirection": "OUTBOUND",
+        "LocalPortDetails": {
+          "Port": 33018,
+          "PortName": "Unknown"
+        },
+        "Protocol": "TCP",
+        "LocalIpDetails": {
+          "IpAddressV4": "10.10.143.107"
+        },
+        "RemoteIpDetails": {
+          "Country": {
+            "CountryName": "United States"
+          },
+          "GeoLocation": {
+            "Lat": 37.751,
+            "Lon": -97.822
+          },
+          "IpAddressV4": "5.161.123.196",
+          "Organization": {
+            "Asn": "213230",
+            "AsnOrg": "Hetzner Online GmbH",
+            "Isp": "Hetzner Online GmbH",
+            "Org": "Hetzner Online GmbH"
+          }
+        },
+        "RemotePortDetails": {
+          "Port": 10300,
+          "PortName": "Unknown"
+        }
+      }
+    },
+    "Evidence": {
+      "ThreatIntelligenceDetails": [
+        {
+          "ThreatListName": "Amazon",
+          "ThreatNames": []
+        }
+      ]
+    },
+    "Archived": false,
+    "Count": 161,
+    "DetectorId": "30b837d8d597bb2c092ab4992996755b",
+    "EventFirstSeen": "2023-05-05T22:59:25.000Z",
+    "EventLastSeen": "2023-05-29T17:44:06.000Z",
+    "ResourceRole": "TARGET",
+    "ServiceName": "guardduty",
+    "AdditionalInfo": {
+      "Value": "{\"threatListName\":\"Amazon\"}",
+      "Type": "default"
+    }
+  },
+  "Severity": 7,
+  "Title": "EC2 instance i-0ed6ce316572be7a3 communicating with a known Bitcoin-related IP address.",
+  "Type": "CryptoCurrency:EC2/BitcoinTool.B",
+  "UpdatedAt": "2023-05-29T17:44:28.844Z",
+  "expel_extra": {
+    "account_id": "455098001579",
+    "account_arn": "arn:aws:organizations::446646187136:account/o-ds5kb6cccc/455098001579",
+    "account_email": "infrastructure-accounts@glitch.com",
+    "account_name": "HyperWeb",
+    "account_status": "ACTIVE",
+    "account_joined_method": "INVITED",
+    "account_joined_at": "2022-06-27T20:12:28.563000+00:00"
+  }
+}

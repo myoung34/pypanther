@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "pypanther-starter-kit"
+version = "0.1.0"
+description = ""
+authors = ["Panther Labs <pypi@runpanther.io>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.11.*"
+pypanther = "^0.1.1a45"
+panther-core = "^0.11.1"
+
+[tool.poetry.dev-dependencies]
+pylint = "^3.2.6"
+isort = "^5.13.2"
+tox = "^4.16.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.tox]
+legacy_tox_ini = """
+
+[tox]
+isolated_build = True
+envlist = py312
+skipsdist = True
+toxworkdir=.tox
+usedevelop=True
+setenv = PYTHONPATH = {toxinidir}
+
+[testenv]
+commands =
+    isort --check --diff app {toxinidir}
+    pylint -r n rules/
+allowlist_externals = pylint
+                      isort
+"""
