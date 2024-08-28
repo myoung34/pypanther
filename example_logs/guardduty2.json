@@ -1,6 +1,6 @@
 {
-  "AccountId": "455098001579",
-  "Arn": "arn:aws:guardduty:us-east-1:455098001579:detector/30b837d8d597bb2c092ab4992996755b/finding/66c3f712f76f94156e869936d93ea090",
+  "AccountId": "111111111",
+  "Arn": "arn:aws:guardduty:us-east-1:111111111:detector/30b837d8d597bb2c092ab4992996755b/finding/66c3f712f76f94156e869936d93ea090",
   "CreatedAt": "2023-05-05T23:01:16.127Z",
   "Description": "EC2 instance i-0ed6ce316572be7a3 is communicating outbound with a known Bitcoin-related IP address 5.161.123.196.",
   "Id": "66c3f712f76f94156e869936d93ea090",
@@ -10,7 +10,7 @@
     "InstanceDetails": {
       "AvailabilityZone": "us-east-1c",
       "IamInstanceProfile": {
-        "Arn": "arn:aws:iam::455098001579:instance-profile/common00a8a3e7cf43de3cf0a897616f",
+        "Arn": "arn:aws:iam::111111111:instance-profile/common00a8a3e7cf43de3cf0a897616f",
         "Id": "AIPAIPEEMTGEUQDAQECYK"
       },
       "ImageDescription": "null",
@@ -135,9 +135,9 @@
   "Type": "CryptoCurrency:EC2/BitcoinTool.B",
   "UpdatedAt": "2023-05-29T17:44:28.844Z",
   "expel_extra": {
-    "account_id": "455098001579",
-    "account_arn": "arn:aws:organizations::446646187136:account/o-ds5kb6cccc/455098001579",
-    "account_email": "infrastructure-accounts@glitch.com",
+    "account_id": "111111111",
+    "account_arn": "arn:aws:organizations::446646187136:account/o-ds5kb6cccc/111111111",
+    "account_email": "infrastructure-accounts@foo.com",
     "account_name": "HyperWeb",
     "account_status": "ACTIVE",
     "account_joined_method": "INVITED",
